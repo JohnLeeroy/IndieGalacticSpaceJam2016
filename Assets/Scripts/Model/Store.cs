@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseUnit : MonoBehaviour, ICost {
-
-	public int buildCost;
+public class Store : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,9 +11,5 @@ public class BaseUnit : MonoBehaviour, ICost {
 	// Update is called once per frame
 	void Update () {
 	
-	}
-
-	public float GetCost() {
-		return buildCost;
 	}
 }
