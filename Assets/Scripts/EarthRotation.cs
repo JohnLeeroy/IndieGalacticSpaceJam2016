@@ -20,8 +20,6 @@ public class EarthRotation : MonoBehaviour {
 		
 		clickerScore++;
 
-		//Just sending a random location on mouse down for testing.  
-		SpawnShips (probe, new Vector2 (Random.Range(-500.0f, 500.0f), Random.Range(-500.0f, 500.0f)));
 	}
 
 	// Update is called once per frame

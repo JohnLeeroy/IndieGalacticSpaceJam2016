@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class MoveProbe : MonoBehaviour {
-	public float target = 2070.0F;
-	public float speed = 1.0F;
 
 	public Vector2 moveToLocation;
 
