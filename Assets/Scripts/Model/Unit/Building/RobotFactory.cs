@@ -3,8 +3,11 @@ using System.Collections;
 
 public class RobotFactory : BaseBuilding {
 
+	Drill drill;
+
 	// Use this for initialization
 	void Start () {
+		drill = GetComponent<Drill>();
 	
 	}
 	

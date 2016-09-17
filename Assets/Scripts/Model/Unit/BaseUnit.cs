@@ -9,6 +9,8 @@ public abstract class BaseUnit : MonoBehaviour, ICost {
 
 	public string description;
 
+	public int costType = -1;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -17,6 +19,10 @@ public abstract class BaseUnit : MonoBehaviour, ICost {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public int GetCostType() {
+		return costType;
 	}
 
 	public float GetCost() {

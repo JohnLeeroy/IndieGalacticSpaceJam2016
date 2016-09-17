@@ -8,9 +8,9 @@ public class Asteroid : MonoBehaviour {
 	public int buildingCapacity;
 
 	//Resources
-	public float materials;	// silicaceous
-	public float fuel;		// carbonaceous
-	public float sellableMaterial;		// Metallic
+	public float materials = 1000;	// silicaceous
+	public float fuel = 1000;		// carbonaceous
+	public float sellableMaterial = 1000;		// Metallic
 
 	// Use this for initialization
 	void Start () {
