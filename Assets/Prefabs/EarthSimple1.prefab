@@ -406,6 +406,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2525dbbf144c93d43a723b6c42ab4d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clouds: 1
+  earthRotationSpeed: 2
+  cloudRotationSpeed: 3
+  cloudRotationScript: {fileID: 0}
+  cloudsTransform: {fileID: 0}
+  cloudType: 1
+  currentSelectedCloud: 1
+  generalUIScript: {fileID: 0}
   labelWidth: 160
 --- !u!114 &11400002
 MonoBehaviour:

@@ -301,7 +301,15 @@ MonoBehaviour:
   ySpeed: 120
   yMinLimit: -20
   yMaxLimit: 80
+  x: 0
+  y: 0
   smoothTime: 0.3
+  xSmooth: 0
+  ySmooth: 0
+  xVelocity: 0
+  yVelocity: 0
+  posSmooth: {x: 0, y: 0, z: 0}
+  posVelocity: {x: 0, y: 0, z: 0}
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
