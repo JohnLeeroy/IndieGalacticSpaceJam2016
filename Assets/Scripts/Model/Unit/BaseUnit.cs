@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseUnit : MonoBehaviour, ICost {
+public abstract class BaseUnit : MonoBehaviour, ICost {
 
 	public int buildCost;
 
-	public string name;
+	public string unitName;
 
 	public string description;
 
@@ -22,4 +22,6 @@ public class BaseUnit : MonoBehaviour, ICost {
 	public float GetCost() {
 		return buildCost;
 	}
+
+	public abstract int getUnitTypeId();
 }

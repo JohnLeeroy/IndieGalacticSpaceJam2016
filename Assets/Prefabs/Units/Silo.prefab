@@ -102,5 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a539e396797e477cb3f8b7046346510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 20
+  buildCost: 25
+  unitName: Silo
+  description: Stores resources
   capacity: 100

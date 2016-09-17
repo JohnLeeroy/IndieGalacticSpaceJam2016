@@ -104,6 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildCost: 15
+  unitName: Freighter
+  description: Transport your items!
   capacity: 100
 --- !u!114 &114000012730489798
 MonoBehaviour:

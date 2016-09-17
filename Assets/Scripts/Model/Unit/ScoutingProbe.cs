@@ -8,11 +8,9 @@ public class ScoutingProbe : BaseUnit {
 	// Use this for initialization
 	void Start () {
 		engine = GetComponent<Engine>();
-
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	override public int getUnitTypeId() {
+		return 57395; //random
 	}
 }

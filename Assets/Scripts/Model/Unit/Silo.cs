@@ -1,26 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Silo : MonoBehaviour, ICost, ICapacity {
+public class Silo : BaseUnit, ICapacity {
 
-	public float cost;
 	public float capacity;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	public float GetCapacity() {
 		return capacity;
 	}
 
-	public float GetCost() {
-		return cost;
+	override public int getUnitTypeId() {
+		return 937562; //random
 	}
 }

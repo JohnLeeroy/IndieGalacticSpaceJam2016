@@ -116,3 +116,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildCost: 15
+  unitName: Scout Probe
+  description: Scout

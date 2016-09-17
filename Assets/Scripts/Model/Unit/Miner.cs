@@ -12,8 +12,7 @@ public class Miner : BaseUnit {
 		drill = GetComponent<Drill> ();
 	}
 
-	// Update is called once per frame
-	void Update () {
-	
+	override public int getUnitTypeId() {
+		return 1358123; //random
 	}
 }

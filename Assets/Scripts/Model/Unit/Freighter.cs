@@ -7,18 +7,11 @@ public class Freighter : BaseUnit, ICapacity {
 
 	public float capacity; 
 
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public float GetCapacity() {
 		return capacity;
+	}
+
+	override public int getUnitTypeId() {
+		return 3425236; //random
 	}
 }
