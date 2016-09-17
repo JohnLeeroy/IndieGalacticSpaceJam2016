@@ -9,6 +9,10 @@ public class Silo : BaseBuilding {
 		return capacity;
 	}
 
+	public virtual int GetCostType() {
+		return Constants.COST_TYPE_MATERIALS;
+	}
+
 	override public int getUnitTypeId() {
 		return 937562; //random
 	}

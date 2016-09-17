@@ -10,10 +10,9 @@ public class RobotFactory : BaseBuilding {
 		drill = GetComponent<Drill>();
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public virtual int GetCostType() {
+		return Constants.COST_TYPE_MATERIALS;
 	}
 
 	override public int getUnitTypeId() {

@@ -13,7 +13,9 @@ public class LaunchPad : BaseBuilding {
 	
 	}
 
-
+	public virtual int GetCostType() {
+		return Constants.COST_TYPE_MATERIALS;
+	}
 
 	override public int getUnitTypeId() {
 		return 935583; //random
