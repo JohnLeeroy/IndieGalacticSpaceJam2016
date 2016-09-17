@@ -8,16 +8,6 @@ public class PurchaseManager : MonoBehaviour {
 
 	BuildingFactory factory;
 
-//	public void Purchase(BaseUnit unit) {
-//		float cash = customer.resource;
-//		if (cash > unit.GetCost ()) {
-//			StoreEntry storeEntry = store.Purchase (unit);
-//			customer.onPurchaseComplete (storeEntry.prefab, unit.GetCost());
-//			//spawn unit
-//
-//		}
-//	}
-
 	void Start() {
 		factory = GetComponent<BuildingFactory> ();
 	}
