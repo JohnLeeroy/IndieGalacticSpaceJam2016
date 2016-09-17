@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Freighter : BaseUnit, ICapacity {
+public class Freighter : BaseUnit {
 
 	Engine engine;
 

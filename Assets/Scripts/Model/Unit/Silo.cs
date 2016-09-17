@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Silo : BaseUnit, ICapacity {
+public class Silo : BaseBuilding {
 
 	public float capacity;
 
