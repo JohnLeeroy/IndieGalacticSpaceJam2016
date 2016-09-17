@@ -3,6 +3,13 @@ using System.Collections;
 
 public class LaunchPad : BaseBuilding {
 
+	int maxCarriers = 1;
+	int carrierCount = 0;
+
+	float sendCargoRate = 100;
+	float carrierCapacity;
+	float carrierCost;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -13,11 +20,11 @@ public class LaunchPad : BaseBuilding {
 	
 	}
 
-	public virtual int GetCostType() {
+	override public int GetCostType() {
 		return Constants.COST_TYPE_MATERIALS;
 	}
 
 	override public int getUnitTypeId() {
-		return 935583; //random
+		return Constants.LAUNCH_PAD_TYPE_ID;
 	}
 }

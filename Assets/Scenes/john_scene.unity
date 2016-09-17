@@ -102,9 +102,8 @@ GameObject:
   - 114: {fileID: 157741562}
   - 114: {fileID: 157741561}
   - 114: {fileID: 157741560}
-  - 114: {fileID: 157741559}
   m_Layer: 5
-  m_Name: BuildSolarCollector
+  m_Name: BuildButton_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,23 +128,6 @@ RectTransform:
   m_AnchoredPosition: {x: 551, y: 0}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &157741559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 157741557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a539e396797e477cb3f8b7046346510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildCost: 20
-  unitName: Silo
-  description: Silo
-  size: 0
-  powerConsumption: 10
-  capacity: 100
 --- !u!114 &157741560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9247aefc13d8b42118b391f4cac297d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 0}
+  label: {fileID: 163311008}
   unitTypeId: 0
 --- !u!114 &157741561
 MonoBehaviour:
@@ -330,9 +312,8 @@ GameObject:
   - 114: {fileID: 344495647}
   - 114: {fileID: 344495646}
   - 114: {fileID: 344495645}
-  - 114: {fileID: 344495644}
   m_Layer: 5
-  m_Name: CreateRobotFactory
+  m_Name: BuildButton_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -357,23 +338,6 @@ RectTransform:
   m_AnchoredPosition: {x: 184, y: 0}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &344495644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 344495642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a539e396797e477cb3f8b7046346510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildCost: 20
-  unitName: Silo
-  description: Silo
-  size: 0
-  powerConsumption: 10
-  capacity: 100
 --- !u!114 &344495645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9247aefc13d8b42118b391f4cac297d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 0}
+  label: {fileID: 719270895}
   unitTypeId: 0
 --- !u!114 &344495646
 MonoBehaviour:
@@ -624,9 +588,8 @@ GameObject:
   - 114: {fileID: 1060535951}
   - 114: {fileID: 1060535950}
   - 114: {fileID: 1060535949}
-  - 114: {fileID: 1060535948}
   m_Layer: 5
-  m_Name: CreateSiloButton
+  m_Name: BuildButton_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -651,23 +614,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1060535948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1060535946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a539e396797e477cb3f8b7046346510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildCost: 20
-  unitName: Silo
-  description: Silo
-  size: 0
-  powerConsumption: 10
-  capacity: 100
 --- !u!114 &1060535949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,7 +625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9247aefc13d8b42118b391f4cac297d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 0}
+  label: {fileID: 1482595213}
   unitTypeId: 0
 --- !u!114 &1060535950
 MonoBehaviour:
@@ -1433,9 +1379,8 @@ GameObject:
   - 114: {fileID: 2086594282}
   - 114: {fileID: 2086594281}
   - 114: {fileID: 2086594280}
-  - 114: {fileID: 2086594279}
   m_Layer: 5
-  m_Name: CreateLaunchPad
+  m_Name: BuildButton_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1460,23 +1405,6 @@ RectTransform:
   m_AnchoredPosition: {x: 366, y: 0}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2086594279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2086594277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a539e396797e477cb3f8b7046346510, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildCost: 20
-  unitName: Silo
-  description: Silo
-  size: 0
-  powerConsumption: 10
-  capacity: 100
 --- !u!114 &2086594280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,7 +1416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9247aefc13d8b42118b391f4cac297d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 0}
+  label: {fileID: 1646637985}
   unitTypeId: 0
 --- !u!114 &2086594281
 MonoBehaviour:

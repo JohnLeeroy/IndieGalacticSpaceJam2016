@@ -6,6 +6,8 @@ public class PurchaseManager : MonoBehaviour {
 	public Player customer;
 	public Store store;			//Can be an asteroid
 
+	BuildingFactory factory;
+
 //	public void Purchase(BaseUnit unit) {
 //		float cash = customer.resource;
 //		if (cash > unit.GetCost ()) {
@@ -16,6 +18,10 @@ public class PurchaseManager : MonoBehaviour {
 //		}
 //	}
 
+	void Start() {
+		factory = GetComponent<BuildingFactory> ();
+	}
+
 	public void PurchaseUpgrade(int upgradeId) {
 
 	}
@@ -23,6 +29,12 @@ public class PurchaseManager : MonoBehaviour {
 	public void Purchase(int unitTypeId) {
 		StoreEntry storeEntry = store.getStoreEntry(unitTypeId);
 		Asteroid asteroid = store.asteroid;
+
+		bool hasSpace = asteroid.hasCapacity (storeEntry.unit.GetSize ());
+		if (!hasSpace) {
+			print ("Not enough space on the asteroid to build " + storeEntry.unit.unitName);
+			return;
+		}
 		bool hasEnoughResource = false;
 		float cost = storeEntry.unit.GetCost ();
 		switch (storeEntry.unit.GetCostType()) {
@@ -48,6 +60,8 @@ public class PurchaseManager : MonoBehaviour {
 		}
 		if (hasEnoughResource) {
 			print("Purchase item " + unitTypeId);
+			GameObject building = factory.instantiateBuilding (asteroid, storeEntry.prefab);
+			asteroid.addBuilding (building);
 			//Spawn on that asteroid
 		} else {
 			print ("Cant buy " + storeEntry.unit.unitName + ". Not enough resource.");

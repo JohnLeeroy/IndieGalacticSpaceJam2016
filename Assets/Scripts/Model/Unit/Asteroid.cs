@@ -1,24 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Asteroid : MonoBehaviour {
 
-	public BaseBuilding[] buildings;
+	public List<BaseBuilding> buildings = new List<BaseBuilding>();
 
+	public int totalPowerCapacity;
+	public int totalPowerConsumption;
+
+	public int buildingCapacityUsed;
 	public int buildingCapacity;
+
+	public int robotCount;
+	public int robotsNeeded;
+
 
 	//Resources
 	public float materials = 1000;	// silicaceous
 	public float fuel = 1000;		// carbonaceous
 	public float sellableMaterial = 1000;		// Metallic
 
-	// Use this for initialization
-	void Start () {
-	
+
+	public bool hasCapacity(int targetBuildingSize) {
+		return (buildingCapacityUsed + targetBuildingSize) < buildingCapacity;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public void addBuilding(GameObject building) {
+		BaseBuilding buildingComponent = building.GetComponent<BaseBuilding> ();
+		buildings.Add (buildingComponent);
+		buildingCapacityUsed += buildingComponent.GetSize ();
 	}
 }
