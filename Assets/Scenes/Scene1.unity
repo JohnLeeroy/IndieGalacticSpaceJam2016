@@ -186,7 +186,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1fadc658cc914590a5d5b6b936cb8da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  probe: {fileID: 474306, guid: 3ebf87a14a7ee46a2b32c2fa2dc98f4a, type: 2}
   speed: 10
+  clickerScore: 0
+--- !u!135 &347664968
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 347664966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &347664969 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400012, guid: 4cca50b46e375734586a1cf77cb87a37, type: 2}
