@@ -15,7 +15,6 @@ public class Asteroid : MonoBehaviour {
 	public int robotCount;
 	public int robotsNeeded;
 
-
 	//Resources
 	public float materials = 1000;	// silicaceous
 	public float fuel = 1000;		// carbonaceous
@@ -28,7 +27,14 @@ public class Asteroid : MonoBehaviour {
 
 	public void addBuilding(GameObject building) {
 		BaseBuilding buildingComponent = building.GetComponent<BaseBuilding> ();
+		buildingComponent.setAsteroid(this);
 		buildings.Add (buildingComponent);
 		buildingCapacityUsed += buildingComponent.GetSize ();
+	}
+
+	public void Drill(float amount) {
+		materials += amount;
+		fuel += amount;
+		sellableMaterial += amount;
 	}
 }

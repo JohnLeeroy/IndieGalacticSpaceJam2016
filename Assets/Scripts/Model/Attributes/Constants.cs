@@ -10,5 +10,6 @@ public abstract class Constants {
 	public const int SOLAR_COLLECTOR_TYPE_ID = 1;
 	public const int ROBOT_FACTORY_TYPE_ID = 2;
 	public const int LAUNCH_PAD_TYPE_ID = 3;
+	public const int DRILL_TYPE_ID = 4;
 
 }

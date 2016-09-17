@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	public float resource;
+	public float money;
 
 	public GameObject onPurchaseComplete(GameObject prefab, float cost) {
-		resource -= cost;
+		money -= cost;
 		return prefab;
 	}
 }
