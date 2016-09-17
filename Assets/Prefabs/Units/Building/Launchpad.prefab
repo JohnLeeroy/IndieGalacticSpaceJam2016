@@ -22,9 +22,9 @@ GameObject:
   - 33: {fileID: 33000010592565588}
   - 65: {fileID: 65000011847123036}
   - 23: {fileID: 23000010755319154}
-  - 114: {fileID: 114000012386314084}
+  - 114: {fileID: 114000010606717212}
   m_Layer: 0
-  m_Name: Silo
+  m_Name: Launchpad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114000012386314084
+--- !u!114 &114000010606717212
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,10 +99,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011108133524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a539e396797e477cb3f8b7046346510, type: 3}
+  m_Script: {fileID: 11500000, guid: 34e9b01cda1e2485d93394bc8d45720f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildCost: 25
-  unitName: Silo
-  description: Stores resources
-  capacity: 100
+  buildCost: 50
+  unitName: LaunchPad
+  description: Sends resources to-from earth
+  size: 2
+  powerConsumption: 5

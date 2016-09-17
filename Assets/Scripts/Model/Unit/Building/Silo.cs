@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Silo : BaseBuilding {
 
-	public float capacity;
+	public float capacity;	
 
 	public float GetCapacity() {
 		return capacity;

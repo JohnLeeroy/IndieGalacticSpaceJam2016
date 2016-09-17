@@ -5,11 +5,7 @@ public class Freighter : BaseUnit {
 
 	Engine engine;
 
-	public float capacity; 
-
-	public float GetCapacity() {
-		return capacity;
-	}
+	public float cargoAmount;
 
 	override public int getUnitTypeId() {
 		return 3425236; //random

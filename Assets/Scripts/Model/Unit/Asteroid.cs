@@ -3,12 +3,14 @@ using System.Collections;
 
 public class Asteroid : MonoBehaviour {
 
-	public int unitCapacity;
+	public BaseBuilding[] buildings;
+
+	public int buildingCapacity;
 
 	//Resources
-	public float materials;
-	public float fuel;
-	public float power;
+	public float materials;	// silicaceous
+	public float fuel;		// carbonaceous
+	public float sellableMaterial;		// Metallic
 
 	// Use this for initialization
 	void Start () {

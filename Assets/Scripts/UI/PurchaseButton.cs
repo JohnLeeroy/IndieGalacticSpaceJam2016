@@ -16,7 +16,7 @@ public class PurchaseButton : MonoBehaviour {
 	}
 
 	public void SetText(string text) {
-		label.text = text;
+		label.text = text + "\n some resource";
 	}
 
 }
