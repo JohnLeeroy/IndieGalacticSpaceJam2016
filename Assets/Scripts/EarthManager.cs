@@ -8,8 +8,17 @@ public class EarthManager : MonoBehaviour {
 
 	private float y; 
 	public float earthRotationSpeed = 10.0f;  
-	public int clickerScore = 0;
+	public float clickerScore = 0;
 	private Vector2 myPos;
+	protected int streetTeam;
+	protected int collegeTeam;
+	protected int polictalTeam;
+
+	protected bool steetTeamPurcahsed = false; 
+	protected bool collegeTeamPurcahsed = false; 
+	protected bool politicalTeamPurcahsed = false; 
+
+	private float multiplier;
 
 	void Start () {
 		//Grabbing Earth's position so we can spawn the ships at the same location. 
@@ -26,6 +35,9 @@ public class EarthManager : MonoBehaviour {
 	void Update () {
 		y -= Time.deltaTime * earthRotationSpeed;
 		transform.rotation = Quaternion.Euler(0,y,0);
+
+		clickerScore = clickerScore * FigureOutMultiplier();
+
 	}
 
 	public void SpawnShips(GameObject type, Vector2 locationOfAstroid){
@@ -49,4 +61,55 @@ public class EarthManager : MonoBehaviour {
 
 
 	}
+
+	public void UpdateStreetTeam(){
+		if(steetTeamPurcahsed){
+			streetTeam++;
+		}
+		else{
+			steetTeamPurcahsed = true; 
+		}
+	}
+
+	public void UpdateCollegeTeam(){
+		if(collegeTeamPurcahsed){
+			collegeTeam++;
+		}
+		else{
+			collegeTeamPurcahsed = true; 
+		}
+	}
+
+	public void UpdatePolictalTeam(){
+		if(politicalTeamPurcahsed){
+			polictalTeam++;
+		}
+		else{
+			politicalTeamPurcahsed = true; 
+		}
+	}
+
+	private float FigureOutMultiplier(){
+		
+
+		if(steetTeamPurcahsed){
+			multiplier = multiplier + 10;
+		}
+
+		if(collegeTeamPurcahsed){
+
+			multiplier = multiplier + 50;
+		}
+
+		if(politicalTeamPurcahsed){
+			multiplier = multiplier + 100; 
+		}
+
+		multiplier = multiplier + (streetTeam * 5);
+		multiplier = multiplier + (collegeTeam * 25);
+		multiplier = multiplier + (polictalTeam * 50);
+
+		return multiplier;
+	}
+
 }
