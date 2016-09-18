@@ -28,6 +28,7 @@ public class Player : MonoBehaviour {
 	public void incrementCashMoney() {
 		//TODO
 		cashMoney += rate * Mathf.Max(1, FigureOutMultiplier());
+		NotificationCenter.DefaultCenter.PostNotification (this, "MoneyUpdate");
 	}
 
 	public void UpdateStreetTeam(){
@@ -81,13 +82,13 @@ public class Player : MonoBehaviour {
 
 	public void AddToCashMoney(float currencyToAdd){
 		cashMoney = cashMoney + currencyToAdd;
+		NotificationCenter.DefaultCenter.PostNotification (this, "MoneyUpdate");
 	}
 
 	public void spawnDollarSigns(){
 		float x = Random.Range (-5, 5);
 		float y = Random.Range (-5, 5);
 		Instantiate (Resources.Load("DollarSign"), new Vector2(x, y), Quaternion.identity);
-
 	}
 
 }

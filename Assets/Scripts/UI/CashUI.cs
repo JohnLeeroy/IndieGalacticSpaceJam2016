@@ -8,7 +8,12 @@ public class CashUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		NotificationCenter.DefaultCenter.AddObserver (this, "MoneyUpdate");
 		NotificationCenter.DefaultCenter.AddObserver (this, "ClickedEarth");
+	}
+
+	public void MoneyUpdate() {
+		text.text = "$ " + player.cashMoney;
 	}
 
 	public void ClickedEarth() {

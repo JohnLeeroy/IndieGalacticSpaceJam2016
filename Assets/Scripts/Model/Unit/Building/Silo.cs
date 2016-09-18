@@ -23,7 +23,10 @@ public class Silo : BaseBuilding {
 	}
 
 	override public void recalculateStats () {
-
+		buildCost = getMaterialNeeded ();
+		size = getAreaNeeded ();
+		robotCost = getRobotsNeeded ();
+		powerConsumption = getPowerNeeded ();
 	}
 
 	override public int getRobotsNeeded () {

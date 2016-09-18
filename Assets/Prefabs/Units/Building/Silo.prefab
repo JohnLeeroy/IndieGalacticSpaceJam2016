@@ -102,9 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a539e396797e477cb3f8b7046346510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildCost: 25
+  buildCost: 20
   unitName: Silo
   description: Stores resources
-  size: 1
-  powerConsumption: 10
-  capacity: 100
+  size: 6
+  powerConsumption: 15
+  asteroid: {fileID: 0}
+  robotCost: 1
+  capacity: 300

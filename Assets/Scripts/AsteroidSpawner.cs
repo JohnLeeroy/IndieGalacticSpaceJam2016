@@ -7,7 +7,11 @@ public class AsteroidSpawner : MonoBehaviour {
 	public GameObject[] asteroidPrefabs;
 	private List<SpawnPoint> spawnPoints;
 
+	public GameObject[] buildingPrefabs;
+	BuildingFactory buildingFactory;
+
 	void Start() {
+		buildingFactory = GetComponent<BuildingFactory> ();
 		spawnPoints = new List<SpawnPoint> ();
 		foreach (Transform tf in spawnTransforms) {
 			SpawnPoint spawnPoint = new SpawnPoint ();
@@ -22,7 +26,12 @@ public class AsteroidSpawner : MonoBehaviour {
 			if (spawnPoint.isVacant) {
 				spawnPoint.isVacant = false;
 				int prefabIndex = Random.Range (0, asteroidPrefabs.Length);
-				Instantiate (asteroidPrefabs [prefabIndex], spawnPoint.transform.position, Quaternion.identity);
+				GameObject asteroidGO = (GameObject) Instantiate (asteroidPrefabs [prefabIndex], spawnPoint.transform.position, Quaternion.identity);
+				Asteroid asteroid = asteroidGO.GetComponent<Asteroid> ();
+				foreach (GameObject prefab in buildingPrefabs) {
+					GameObject building = buildingFactory.instantiateBuilding (asteroid, prefab);
+					asteroid.addBuilding (building);
+				}
 			}
 		}
 	}

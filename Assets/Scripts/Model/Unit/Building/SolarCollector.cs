@@ -21,6 +21,7 @@ public class SolarCollector : BaseBuilding {
 	override public void recalculateStats () {
 		powerConsumption = getPowerNeeded();
 		size = getAreaNeeded ();
+		robotCost = getRobotsNeeded ();
 		buildCost = getMaterialNeeded ();
 	}
 

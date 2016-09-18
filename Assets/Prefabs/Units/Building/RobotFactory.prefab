@@ -102,10 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d434d22b852804f77aa5e3b15aa648cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildCost: 100
+  buildCost: 40
   unitName: Robot Factory
   description: Builds robots
-  size: 2
-  powerConsumption: 10
+  size: 7
+  powerConsumption: 12
   asteroid: {fileID: 0}
+  robotCost: 0
   robotCount: 5

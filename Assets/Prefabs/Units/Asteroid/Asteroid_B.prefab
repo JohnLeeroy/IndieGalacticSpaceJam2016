@@ -94,20 +94,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildings: []
   asteroidName: 
-  baseBuildingCapacity: 10
-  baseMaterialCapacity: 100
-  basePowerCapacity: 100
-  baseRobotCount: 2
-  totalPowerCapacity: 0
+  baseBuildingCapacity: 1000
+  baseRobotCount: 10
+  totalPowerCapacity: 50
   totalPowerConsumption: 0
   buildingCapacityUsed: 0
-  buildingCapacity: 100
-  robotCount: 0
+  buildingCapacity: 1000
+  robotCount: 5
   robotUsed: 0
-  materialCapacity: 200
-  materials: 2000
-  fuel: 2000
-  sellableMaterial: 1000
+  materialCapacity: 300
+  materials: 0
+  fuel: 0
+  sellableMaterial: 0
 --- !u!114 &114000011770492426
 MonoBehaviour:
   m_ObjectHideFlags: 1

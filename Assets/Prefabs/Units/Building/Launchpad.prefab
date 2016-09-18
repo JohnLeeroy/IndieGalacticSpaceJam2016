@@ -102,8 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e9b01cda1e2485d93394bc8d45720f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildCost: 50
+  buildCost: 45
   unitName: LaunchPad
   description: Sends resources to-from earth
-  size: 2
-  powerConsumption: 5
+  size: 10
+  powerConsumption: 9
+  asteroid: {fileID: 0}
+  robotCost: 0

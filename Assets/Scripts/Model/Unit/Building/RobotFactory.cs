@@ -19,7 +19,9 @@ public class RobotFactory : BaseBuilding {
 	}
 
 	override public void recalculateStats () {
-
+		buildCost = getMaterialNeeded ();
+		size = getAreaNeeded ();
+		powerConsumption = getPowerNeeded ();
 	}
 
 	override public int getRobotsNeeded () {

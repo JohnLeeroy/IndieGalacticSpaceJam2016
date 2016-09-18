@@ -9,8 +9,8 @@ public class Asteroid : MonoBehaviour {
 	public string asteroidName;
 
 	public int baseBuildingCapacity;
-	public float baseMaterialCapacity;
-	public float basePowerCapacity;
+//	public float baseMaterialCapacity;
+//	public float basePowerCapacity;
 	public int baseRobotCount;
 
 	public float totalPowerCapacity;
@@ -23,6 +23,14 @@ public class Asteroid : MonoBehaviour {
 	public int robotUsed;
 
 	public float materialCapacity;
+
+	bool hasLandingPad = false;
+
+	private int drillCount = 0;
+	private int launchPadCount = 0;
+	private int robotFacilityCount = 0;
+	private int siloCount = 0;
+	private int solarCollectorCount = 0;
 
 	//When sellable material is at 500 check to see if you have enough fuel which should be above 500. Then remove 500 sellable material and 500 fuel from the astroid.
 	//When freighter hits earth, earth gains $500x100
@@ -50,7 +58,7 @@ public class Asteroid : MonoBehaviour {
 	}
 
 	void Update () {
-		if(sellableMaterial >= 500.0){
+		if(hasLandingPad && sellableMaterial >= 500.0){
 			if(fuel >= 500.0){
 				
 				sellableMaterial -= 500;
@@ -97,26 +105,42 @@ public class Asteroid : MonoBehaviour {
 		buildingCapacityUsed = 0;
 		robotUsed = 0;
 
+		totalPowerCapacity = 0;
+		materialCapacity = 0;
+
 		robotCount = baseRobotCount;
-		totalPowerCapacity = basePowerCapacity;
-		buildingCapacity = baseBuildingCapacity;
-		materialCapacity = baseMaterialCapacity;
+
+		drillCount = 0;
+		launchPadCount = 0;
+		robotFacilityCount = 0;
+		siloCount = 0;
+		solarCollectorCount = 0;
 
 		foreach (BaseBuilding building in buildings) {
 			buildingCapacityUsed += building.GetSize ();
 			totalPowerConsumption += building.powerConsumption;
-			robotUsed += 1; //TODO?
+			robotUsed += building.getRobotsNeeded(); //TODO?
 			switch (building.getUnitTypeId ()) {
 				case Constants.SOLAR_COLLECTOR_TYPE_ID:
 					totalPowerCapacity += ((SolarCollector)building).powerCapacity;
+					solarCollectorCount++;
 					break;
 				case Constants.SILO_TYPE_ID:
 					materialCapacity += ((Silo)building).capacity;
+					siloCount++;
 				break;
-			case Constants.ROBOT_FACTORY_TYPE_ID:
-				RobotFactory factory = (RobotFactory)building;
-				robotCount += factory.robotCount;
-				break;
+				case Constants.ROBOT_FACTORY_TYPE_ID:
+					RobotFactory factory = (RobotFactory)building;
+					robotCount += factory.robotCount;
+					robotFacilityCount++;
+					break;
+				case Constants.LAUNCH_PAD_TYPE_ID:
+					hasLandingPad = true;
+					launchPadCount++;
+					break;
+				case Constants.DRILL_TYPE_ID:
+					drillCount++;
+					break;
 			}	
 		}
 	}
@@ -125,5 +149,25 @@ public class Asteroid : MonoBehaviour {
 		materials = Mathf.Min (materials + amount, materialCapacity);
 		fuel =  Mathf.Min (fuel + amount, materialCapacity);
 		sellableMaterial =  Mathf.Min (sellableMaterial + amount, materialCapacity);
+	}
+
+	public int GetDrillCount() {
+		return drillCount;
+	}
+
+	public int GetLaunchPadCount() {
+		return launchPadCount;
+	}
+
+	public int GetRobotFacilityCount() {
+		return robotFacilityCount;
+	}
+
+	public int GetSiloCount() {
+		return siloCount;
+	}
+
+	public int GetSolarCollectorCount() {
+		return solarCollectorCount;
 	}
 }

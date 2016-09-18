@@ -104,8 +104,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildCost: 25
   unitName: Drill
-  description: Drill Drill Drill Baby
-  size: 2
-  powerConsumption: 10
-  damage: 10
+  description: 
+  size: 5
+  powerConsumption: 15
+  asteroid: {fileID: 0}
+  robotCost: 1
+  damage: 1
   rateOfAttack: 1

@@ -4,6 +4,7 @@ using System.Collections;
 public abstract class BaseBuilding : BaseUnit, IUnitCost {
 
 	public Asteroid asteroid;  //my asteroid
+	public int robotCost;
 
 	public void setAsteroid(Asteroid asteroid) {
 		this.asteroid = asteroid;

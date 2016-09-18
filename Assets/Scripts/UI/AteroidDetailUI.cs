@@ -18,18 +18,29 @@ public class AteroidDetailUI : MonoBehaviour {
 	void Start () {
 		cursorManager = GameObject.Find ("GameManager").GetComponent<CursorManager> ();
 		NotificationCenter.DefaultCenter.AddObserver (this, "SelectedAsteroid");
+		StartCoroutine (CR_UpdateUI ());
 	}
 
-	void SelectedAsteroid() {
+	IEnumerator CR_UpdateUI() {
+		while (true) {
+			Asteroid asteroid = cursorManager.selectedAsteroid;
+			if (asteroid != null) {
+				updateUI ();
+			}
+
+			yield return new WaitForSeconds(0.5f);
+		}
+	}
+	void updateUI() {
 		Asteroid asteroid = cursorManager.selectedAsteroid;
 		nameLabel.text = asteroid.asteroidName;
 		robotLabel.text = string.Format ("Robot: " + asteroid.robotUsed + " / " + asteroid.robotCount);   
 		powerLabel.text = string.Format ("Power: " +  asteroid.totalPowerConsumption + " / " + asteroid.totalPowerCapacity); 
 		areaLabel.text = string.Format ("Area:   " + asteroid.buildingCapacityUsed + " / " +  asteroid.buildingCapacity); 
 
-		fuelLabel.text = string.Format ("Ore C : {0} / {0}", ShortenStr(asteroid.fuel), ShortenStr(asteroid.materialCapacity)); 
-		materialLabel.text = string.Format ("Ore S: {0} / {0}", ShortenStr(asteroid.materials), ShortenStr(asteroid.materialCapacity)); 
-		sellableMatLabel.text = string.Format ("Ore M: {0} / {0}", ShortenStr(asteroid.sellableMaterial), ShortenStr(asteroid.materialCapacity));
+		fuelLabel.text = string.Format ("Ore C:   " + ShortenStr(asteroid.fuel) + " / " +  ShortenStr(asteroid.materialCapacity)); 
+		materialLabel.text = string.Format ("Ore S:   " + ShortenStr(asteroid.materials) + " / " +  ShortenStr(asteroid.materialCapacity)); 
+		sellableMatLabel.text = string.Format ("Ore M:   " + ShortenStr(asteroid.sellableMaterial) + " / " +  ShortenStr(asteroid.materialCapacity)); 
 	}
 
 	public string ShortenStr(float valueToConvert)

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Drill : BaseBuilding {
 
-	public float damage = 10;
+	public float damage = 1;
 	public float rateOfAttack = 1;
 
 	// Use this for initialization
@@ -25,7 +25,10 @@ public class Drill : BaseBuilding {
 	}
 
 	override public void recalculateStats () {
-		
+		buildCost = getMaterialNeeded ();
+		size = getAreaNeeded ();
+		robotCost = getRobotsNeeded ();
+		powerConsumption = getPowerNeeded ();
 	}
 
 	override public int getRobotsNeeded () {

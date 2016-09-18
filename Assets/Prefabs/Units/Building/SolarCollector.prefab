@@ -102,9 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44b2bc5c22324d4bb1c0c285c8b3368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildCost: 20
+  buildCost: 30
   unitName: Solar Collector
   description: Beep Boop sun
-  size: 2
+  size: 20
   powerConsumption: 0
+  asteroid: {fileID: 0}
+  robotCost: 1
   powerCapacity: 100

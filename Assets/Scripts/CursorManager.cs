@@ -11,9 +11,15 @@ public class CursorManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
-	
+
+	void selectedAsteroidIndicator(Transform TF)
+	{
+		GameObject GO = GameObject.FindGameObjectWithTag("selectionParticle");
+		Destroy(GO);
+		Instantiate(Resources.Load("AsteroidSelectedParticle"), TF.position, Quaternion.identity);
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetMouseButtonUp(0))
@@ -25,7 +31,8 @@ public class CursorManager : MonoBehaviour {
 				Debug.Log (hit.transform.tag);
 				switch(hit.transform.tag) {
 					case "asteroid":
-						selectedAsteroid = hit.transform.GetComponent<Asteroid> ();
+					selectedAsteroid = hit.transform.GetComponent<Asteroid> ();
+					selectedAsteroidIndicator(hit.transform);
 						NotificationCenter.DefaultCenter.PostNotification (this, "SelectedAsteroid");
 					break;
 					case "earth":
