@@ -44,6 +44,8 @@ public class Asteroid : MonoBehaviour {
 	void Start() {
 		
 		recalculateStats ();
+		GetComponent<Renderer> ().material.SetColor ("_OutLineColor", Color.green);
+	
 	}
 
 	void Update () {

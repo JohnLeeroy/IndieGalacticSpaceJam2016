@@ -92,7 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildings: []
-  currencyModifier: 0
   baseBuildingCapacity: 10
   baseMaterialCapacity: 100
   basePowerCapacity: 100
