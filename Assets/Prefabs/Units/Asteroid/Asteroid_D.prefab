@@ -19,13 +19,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012008653362}
-  - 33: {fileID: 33000012103084562}
-  - 65: {fileID: 65000014154188032}
-  - 23: {fileID: 23000012222845212}
   - 114: {fileID: 114000010786548036}
   - 114: {fileID: 114000011770492426}
+  - 23: {fileID: 23000012222845212}
+  - 33: {fileID: 33000010423290444}
   m_Layer: 0
-  m_Name: Asteroid
+  m_Name: Asteroid_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011752551702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 26, y: 4.66, z: 0}
+  m_LocalScale: {x: 250, y: 250, z: 250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 78fa8c6cf8494a8458e481f9665233b4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -73,25 +72,13 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000012103084562
+--- !u!33 &33000010423290444
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011752551702}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65000014154188032
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011752551702}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Mesh: {fileID: 4300006, guid: 38c445290885e384197c7c05e3d49f5f, type: 3}
 --- !u!114 &114000010786548036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -103,10 +90,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0c8a79917134906bfb25cb538aa4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitCapacity: 12
+  buildings: []
+  baseBuildingCapacity: 10
+  baseMaterialCapacity: 100
+  basePowerCapacity: 100
+  baseRobotCount: 2
+  totalPowerCapacity: 0
+  totalPowerConsumption: 0
+  buildingCapacityUsed: 0
+  buildingCapacity: 100
+  robotCount: 0
+  robotUsed: 0
+  materialCapacity: 200
   materials: 2000
   fuel: 2000
-  power: 2000
+  sellableMaterial: 1000
 --- !u!114 &114000011770492426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,8 +116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b4e8778983541cd976c9e7fe2a421d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asteroid: {fileID: 0}
   storeItemPrefabs:
-  - {fileID: 1000010888319184, guid: 1d8899a81dd30405d936a3c0af1e657e, type: 2}
-  - {fileID: 1000012777757010, guid: 7b31f3813362c4275830977f0e527aea, type: 2}
-  - {fileID: 1000012401861020, guid: b56130368a01344b4a185ddf22669439, type: 2}
   - {fileID: 1000011108133524, guid: 60a4875a5af2e47568ae4983459d5fcf, type: 2}
+  - {fileID: 1000011108133524, guid: 6320f3997b0dd476099e15bf1ba29282, type: 2}
+  - {fileID: 1000011108133524, guid: a12f2f1e179f64311a65c3c7f2a6569f, type: 2}
+  - {fileID: 1000011108133524, guid: b2b86b89f6bb54f9882e766cf175ba2a, type: 2}
+  - {fileID: 1000011108133524, guid: 3b8f6532de6fd4447981f033234ec3f4, type: 2}

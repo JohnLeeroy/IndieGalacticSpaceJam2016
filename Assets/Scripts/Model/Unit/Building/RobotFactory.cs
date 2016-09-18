@@ -5,11 +5,6 @@ public class RobotFactory : BaseBuilding {
 
 	public int robotCount;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
 	override public int GetCostType() {
 		return Constants.COST_TYPE_MATERIALS;
 	}
