@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
 
 	public void incrementCashMoney() {
 		//TODO
-		cashMoney += rate * FigureOutMultiplier();
+		cashMoney += rate * Mathf.Max(1, FigureOutMultiplier());
 	}
 
 	public void UpdateStreetTeam(){

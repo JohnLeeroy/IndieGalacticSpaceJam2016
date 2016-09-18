@@ -5,6 +5,11 @@ public class Silo : BaseBuilding {
 
 	public float capacity;	
 
+	// Use this for initialization
+	void Start () {
+		NotificationCenter.DefaultCenter.AddObserver (this, "recalculateStats");
+	}
+
 	public float GetCapacity() {
 		return capacity;
 	}

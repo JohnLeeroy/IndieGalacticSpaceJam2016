@@ -5,6 +5,11 @@ public class RobotFactory : BaseBuilding {
 
 	public int robotCount = 5;
 
+	// Use this for initialization
+	void Start () {
+		NotificationCenter.DefaultCenter.AddObserver (this, "recalculateStats");
+	}
+
 	override public int GetCostType() {
 		return Constants.COST_TYPE_MATERIALS;
 	}
