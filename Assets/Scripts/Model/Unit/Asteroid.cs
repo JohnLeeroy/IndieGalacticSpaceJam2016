@@ -6,6 +6,8 @@ public class Asteroid : MonoBehaviour {
 
 	public List<BaseBuilding> buildings = new List<BaseBuilding>();
 
+	public string asteroidName;
+
 	public int baseBuildingCapacity;
 	public float baseMaterialCapacity;
 	public float basePowerCapacity;
@@ -27,6 +29,16 @@ public class Asteroid : MonoBehaviour {
 	public float fuel = 1000;		// carbonaceous
 	public float sellableMaterial = 1000;		// Metallic
 
+	/*
+		Concept
+		The first rocket from Earth to an asteroid was funded by VC.  We have no money at this point and need a “starter kit” to get us going.  This kit will contain 4 of our 5 buildings.
+		Components
+		1 Solar Farm, 1 Drill, 1 Storage, & 1 Robotics Facility
+		Characteristics
+		This will provide immediate income
+		This will provide 2 extra robots for our next 2 buildings
+		This will provide 17 extra units of power for our next building(s)
+	*/
 	void Start() {
 		recalculateStats ();
 	}
