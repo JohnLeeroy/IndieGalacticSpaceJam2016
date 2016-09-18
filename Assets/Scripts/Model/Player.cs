@@ -5,7 +5,7 @@ public class Player : MonoBehaviour {
 
 	public float cashMoney;
 	public float rate = 1;
-	private float multiplier;
+	private float multiplier = 1;
 
 	protected int streetTeam;
 	protected int collegeTeam;
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
 
 	public void ClickedEarth() {
 		incrementCashMoney ();
+		spawnDollarSigns (); 
 	}
 
 	public void incrementCashMoney() {
@@ -76,6 +77,17 @@ public class Player : MonoBehaviour {
 		multiplier = multiplier + (polictalTeam * 50);
 
 		return multiplier;
+	}
+
+	public void AddToCashMoney(float currencyToAdd){
+		cashMoney = cashMoney + currencyToAdd;
+	}
+
+	public void spawnDollarSigns(){
+		float x = Random.Range (-5, 5);
+		float y = Random.Range (-5, 5);
+		Instantiate (Resources.Load("DollarSign"), new Vector2(x, y), Quaternion.identity);
+
 	}
 
 }

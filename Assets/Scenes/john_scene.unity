@@ -2034,6 +2034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e2acd5997d34ee9b72fd949c7b8cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseManager: {fileID: 0}
 --- !u!1 &488703343
 GameObject:
   m_ObjectHideFlags: 0
@@ -4006,9 +4007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb800e94da53543efb46a840e3776e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probe: {fileID: 158144, guid: 3ebf87a14a7ee46a2b32c2fa2dc98f4a, type: 2}
   earthRotationSpeed: 10
-  clickerScore: 0
 --- !u!135 &1101421986
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5921,6 +5920,10 @@ Prefab:
     - target: {fileID: 4000011040786412, guid: 4c51cb967c71541be9eafcd291957fe5, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012870588508, guid: 4c51cb967c71541be9eafcd291957fe5, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c51cb967c71541be9eafcd291957fe5, type: 2}

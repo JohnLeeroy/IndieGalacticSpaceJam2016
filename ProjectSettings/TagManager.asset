@@ -9,6 +9,8 @@ TagManager:
   - politicalteam
   - streetteam
   - collegeteam
+  - asteroid
+  - freighter
   layers:
   - Default
   - TransparentFX
