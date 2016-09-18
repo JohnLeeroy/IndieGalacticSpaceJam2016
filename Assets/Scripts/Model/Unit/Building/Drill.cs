@@ -8,7 +8,7 @@ public class Drill : BaseBuilding {
 
 	// Use this for initialization
 	void Start () {
-	
+		NotificationCenter.DefaultCenter.AddObserver (this, "recalculateStats");
 	}
 	
 	// Update is called once per frame
@@ -24,13 +24,8 @@ public class Drill : BaseBuilding {
 		return Constants.DRILL_TYPE_ID;
 	}
 
-	//Building Name: Robots / Power / Space / Unique Units / Silicaceous Ore
-	//Drill: 1 / 15 / 5 / 1 / 25
-	// public const int DRILL_MORE_ORE_UPGRADE_ID = 6;
-	// public const int DRILL_LESS_SPACE_UPGRADE_ID = 7;
-
 	override public void recalculateStats () {
-
+		
 	}
 
 	override public int getRobotsNeeded () {

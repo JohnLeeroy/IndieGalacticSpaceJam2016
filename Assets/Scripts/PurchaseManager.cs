@@ -23,7 +23,7 @@ public class PurchaseManager : MonoBehaviour {
 		Asteroid asteroid = store.asteroid;
 		int unitType = storeEntry.unit.getUnitTypeId ();
 		int costType = storeEntry.unit.GetCostType ();
-		print ("I have " + asteroid.materials + "  Cost: " + storeEntry.unit.GetCost() );
+//		print ("I have " + asteroid.materials + "  Cost: " + storeEntry.unit.GetCost() );
 
 		bool hasSpace = asteroid.hasCapacity (storeEntry.unit.GetSize ());
 		if (!hasSpace) {

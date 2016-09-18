@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AsteroidRotation : MonoBehaviour {
 
-	public GameObject ship; 
+	//public GameObject ship; 
 	private float y; 
 	private float z; 
 	private float x; 
@@ -24,15 +24,15 @@ public class AsteroidRotation : MonoBehaviour {
 		z += Time.deltaTime * zRotationSpeed;
 
 		transform.rotation = Quaternion.Euler(x,y,z);
-
-		if(Input.GetKeyDown("space")){
-			GameObject.FindGameObjectWithTag ("earth").GetComponent<EarthManager> ().BringShipsBack (ship, new Vector2 (transform.position.x, transform.position.y));
-		}
+//
+//		if(Input.GetKeyDown("space")){
+//			GameObject.FindGameObjectWithTag ("earth").GetComponent<EarthManager> ().BringShipsBack (ship, new Vector2 (transform.position.x, transform.position.y));
+//		}
 	}
 
-	void OnMouseDown(){
-		Debug.Log ("click");
-		GameObject.FindGameObjectWithTag ("earth").GetComponent<EarthManager> ().SpawnShips (ship, new Vector2 (transform.position.x, transform.position.y));
-
-	}
+//	void OnMouseDown(){
+//		Debug.Log ("click");
+//		GameObject.FindGameObjectWithTag ("earth").GetComponent<EarthManager> ().SpawnShips (ship, new Vector2 (transform.position.x, transform.position.y));
+//
+//	}
 }

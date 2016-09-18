@@ -12,7 +12,7 @@ public class LaunchPad : BaseBuilding {
 
 	// Use this for initialization
 	void Start () {
-	
+		NotificationCenter.DefaultCenter.AddObserver (this, "recalculateStats");
 	}
 	
 	// Update is called once per frame

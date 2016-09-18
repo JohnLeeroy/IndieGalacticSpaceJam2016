@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000012222845212}
   - 33: {fileID: 33000010423290444}
   - 135: {fileID: 135000012284895162}
+  - 114: {fileID: 114000011597097750}
   m_Layer: 0
   m_Name: Asteroid_D
   m_TagString: asteroid
@@ -92,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildings: []
+  asteroidName: 
   baseBuildingCapacity: 10
   baseMaterialCapacity: 100
   basePowerCapacity: 100
@@ -106,6 +108,20 @@ MonoBehaviour:
   materials: 2000
   fuel: 2000
   sellableMaterial: 1000
+--- !u!114 &114000011597097750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011752551702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383ef89f7840141569e2813a0fd8a643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRotationSpeed: 10
+  yRotationSpeed: 8
+  zRotationSpeed: 4
 --- !u!114 &114000011770492426
 MonoBehaviour:
   m_ObjectHideFlags: 1

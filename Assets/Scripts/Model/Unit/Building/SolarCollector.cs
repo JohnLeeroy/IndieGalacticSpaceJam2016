@@ -5,6 +5,10 @@ public class SolarCollector : BaseBuilding {
 
 	public float powerCapacity = 100; 
 
+	// Use this for initialization
+	void Start () {
+		NotificationCenter.DefaultCenter.AddObserver (this, "recalculateStats");
+	}
 
 	override public int GetCostType() {
 		return Constants.COST_TYPE_MATERIALS;
@@ -15,7 +19,9 @@ public class SolarCollector : BaseBuilding {
 	}
 
 	override public void recalculateStats () {
-
+		powerConsumption = getPowerNeeded();
+		size = getAreaNeeded ();
+		buildCost = getMaterialNeeded ();
 	}
 
 	override public int getRobotsNeeded () {

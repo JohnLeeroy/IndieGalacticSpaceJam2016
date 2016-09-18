@@ -46,6 +46,7 @@ public class Asteroid : MonoBehaviour {
 	void Start() {
 		
 		recalculateStats ();
+		asteroidName = AsteroidNames.Instance.getNextAsteroidName ();
 	}
 
 	void Update () {
@@ -80,7 +81,6 @@ public class Asteroid : MonoBehaviour {
 
 	public bool hasRobots(int robotCost) {
 		return (robotUsed + robotCost) <= robotCount;
-
 	}
 
 	public void addBuilding(GameObject building) {
