@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
 
 	public void ClickedEarth() {
 		incrementCashMoney ();
+		spawnDollarSigns (); 
 	}
 
 	public void incrementCashMoney() {
@@ -80,6 +81,13 @@ public class Player : MonoBehaviour {
 
 	public void AddToCashMoney(float currencyToAdd){
 		cashMoney = cashMoney + currencyToAdd;
+	}
+
+	public void spawnDollarSigns(){
+		float x = Random.Range (-5, 5);
+		float y = Random.Range (-5, 5);
+		Instantiate (Resources.Load("DollarSign"), new Vector2(x, y), Quaternion.identity);
+
 	}
 
 }
