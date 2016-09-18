@@ -21,11 +21,15 @@ public class CursorManager : MonoBehaviour {
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit, 500))
 			{
-				if(hit.transform.tag.Equals("asteroid"))
-				{
-					selectedAsteroid = hit.transform.GetComponent<Asteroid> ();
-					NotificationCenter.DefaultCenter.PostNotification (this, "SelectedAsteroid");
-				};
+				switch(hit.transform.tag) {
+					case "asteroid":
+						selectedAsteroid = hit.transform.GetComponent<Asteroid> ();
+						NotificationCenter.DefaultCenter.PostNotification (this, "SelectedAsteroid");
+					break;
+					case "earth":
+						NotificationCenter.DefaultCenter.PostNotification (this, "ClickedEarth");
+					break;
+				}
 			}
 		}
 	}

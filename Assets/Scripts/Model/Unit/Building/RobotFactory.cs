@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RobotFactory : BaseBuilding {
 
-	public int robotCount;
+	public int robotCount = 5;
 
 	override public int GetCostType() {
 		return Constants.COST_TYPE_MATERIALS;

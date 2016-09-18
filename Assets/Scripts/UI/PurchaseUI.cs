@@ -11,18 +11,6 @@ public class PurchaseUI : MonoBehaviour {
 	public PurchaseButton[] button;
 
 	CursorManager cursorManager;
-//	void Start() {
-//		
-//		storeEntries = new List<StoreEntry>(purchaseManager.store.storeEntries.Values);
-//		for (int i = 0; i < storeEntries.Count; i++) {
-//			if (i < button.Length) {
-//				StoreEntry entry = storeEntries [i];
-//				button [i].SetText (entry.unit.unitName);
-//				button [i].SetUnitTypeId (entry.unit.getUnitTypeId ());
-//			}
-//		}
-//	}
-
 
 	void Start() {
 		cursorManager = GameObject.Find ("GameManager").GetComponent<CursorManager> ();
