@@ -10,6 +10,7 @@ public class PurchaseUI : MonoBehaviour {
 
 	public PurchaseButton[] button;
 
+	CursorManager cursorManager;
 //	void Start() {
 //		
 //		storeEntries = new List<StoreEntry>(purchaseManager.store.storeEntries.Values);
@@ -21,6 +22,21 @@ public class PurchaseUI : MonoBehaviour {
 //			}
 //		}
 //	}
+
+
+	void Start() {
+		cursorManager = GameObject.Find ("GameManager").GetComponent<CursorManager> ();
+		NotificationCenter.DefaultCenter.AddObserver (this, "SelectedAsteroid");
+	}
+
+	void OnDestroy() {
+		NotificationCenter.DefaultCenter.RemoveObserver (this, "SelectedAsteroid");
+	}
+
+	public void SelectedAsteroid() {
+		Store store = cursorManager.selectedAsteroid.GetComponent<Store> ();
+		setStoreEntries (new List<StoreEntry>(store.storeEntries.Values));
+	}
 
 	public void setStoreEntries(IList<StoreEntry> storeEntries) {
 		this.storeEntries = storeEntries;

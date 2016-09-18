@@ -8,12 +8,12 @@ public class PurchaseManager : MonoBehaviour {
 
 	BuildingFactory factory;
 
-	void Start() {
-		factory = GetComponent<BuildingFactory> ();
-	}
-
 	public void PurchaseUpgrade(int upgradeId) {
 
+	}
+
+	void Start() {
+		factory = GetComponent<BuildingFactory> ();
 	}
 
 	public void Purchase(int unitTypeId) {
