@@ -6,6 +6,8 @@ public class Asteroid : MonoBehaviour {
 
 	public List<BaseBuilding> buildings = new List<BaseBuilding>();
 
+	public string asteroidName;
+
 	public int baseBuildingCapacity;
 	public float baseMaterialCapacity;
 	public float basePowerCapacity;
@@ -45,7 +47,8 @@ public class Asteroid : MonoBehaviour {
 		
 		recalculateStats ();
 		GetComponent<Renderer> ().material.SetColor ("_OutLineColor", Color.green);
-	
+		asteroidName = AsteroidNames.Instance.getNextAsteroidName ();
+
 	}
 
 	void Update () {
@@ -80,7 +83,6 @@ public class Asteroid : MonoBehaviour {
 
 	public bool hasRobots(int robotCost) {
 		return (robotUsed + robotCost) <= robotCount;
-
 	}
 
 	public void addBuilding(GameObject building) {

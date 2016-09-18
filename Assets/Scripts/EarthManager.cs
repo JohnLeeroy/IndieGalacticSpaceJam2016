@@ -17,11 +17,9 @@ public class EarthManager : MonoBehaviour {
 		
 		y -= Time.deltaTime * earthRotationSpeed;
 		transform.rotation = Quaternion.Euler(0,y,0);
-
 	}
 		
 	void OnTriggerEnter(Collider other) {
-
 		if(other.gameObject.tag == "freighter")
 		{
 			TransferCurrency(other.gameObject.GetComponent<FreighterController>().currency);
@@ -54,6 +52,5 @@ public class EarthManager : MonoBehaviour {
 		
 		GameObject.FindGameObjectWithTag ("Player").GetComponent<Player> ().AddToCashMoney(currency);
 		Debug.Log (currency);
-
 	}
 }

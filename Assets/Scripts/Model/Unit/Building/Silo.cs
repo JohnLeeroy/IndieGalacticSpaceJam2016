@@ -5,6 +5,11 @@ public class Silo : BaseBuilding {
 
 	public float capacity;	
 
+	// Use this for initialization
+	void Start () {
+		NotificationCenter.DefaultCenter.AddObserver (this, "recalculateStats");
+	}
+
 	public float GetCapacity() {
 		return capacity;
 	}
@@ -15,5 +20,31 @@ public class Silo : BaseBuilding {
 
 	override public int getUnitTypeId() {
 		return Constants.SILO_TYPE_ID;
+	}
+
+	override public void recalculateStats () {
+
+	}
+
+	override public int getRobotsNeeded () {
+		const int baseRobots = 1;
+		return baseRobots;
+	}
+
+	override public int getPowerNeeded () {
+		const int powerConsumption = 6;
+		return powerConsumption;
+	}
+
+	override public int getAreaNeeded () {
+		const int spaceUsed = 15;
+		//TODO Check level
+		return spaceUsed;
+
+	}
+
+	override public int getMaterialNeeded () {
+		const int baseCost = 20;
+		return baseCost;
 	}
 }

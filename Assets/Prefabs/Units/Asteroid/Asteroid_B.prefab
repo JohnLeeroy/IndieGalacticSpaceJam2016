@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000012222845212}
   - 33: {fileID: 33000010423290444}
   - 135: {fileID: 135000011497567136}
+  - 114: {fileID: 114000012774927372}
   m_Layer: 0
   m_Name: Asteroid_B
   m_TagString: asteroid
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildings: []
-  currencyModifier: 0
+  asteroidName: 
   baseBuildingCapacity: 10
   baseMaterialCapacity: 100
   basePowerCapacity: 100
@@ -119,7 +120,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroid: {fileID: 0}
-  storeItemPrefabs: []
+  storeItemPrefabs:
+  - {fileID: 1000011108133524, guid: 60a4875a5af2e47568ae4983459d5fcf, type: 2}
+  - {fileID: 1000011108133524, guid: 6320f3997b0dd476099e15bf1ba29282, type: 2}
+  - {fileID: 1000011108133524, guid: a12f2f1e179f64311a65c3c7f2a6569f, type: 2}
+  - {fileID: 1000011108133524, guid: b2b86b89f6bb54f9882e766cf175ba2a, type: 2}
+  - {fileID: 1000011108133524, guid: 3b8f6532de6fd4447981f033234ec3f4, type: 2}
+--- !u!114 &114000012774927372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011752551702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383ef89f7840141569e2813a0fd8a643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xRotationSpeed: 10
+  yRotationSpeed: 8
+  zRotationSpeed: 4
 --- !u!135 &135000011497567136
 SphereCollider:
   m_ObjectHideFlags: 1

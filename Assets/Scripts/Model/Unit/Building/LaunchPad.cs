@@ -12,7 +12,7 @@ public class LaunchPad : BaseBuilding {
 
 	// Use this for initialization
 	void Start () {
-	
+		NotificationCenter.DefaultCenter.AddObserver (this, "recalculateStats");
 	}
 	
 	// Update is called once per frame
@@ -27,4 +27,31 @@ public class LaunchPad : BaseBuilding {
 	override public int getUnitTypeId() {
 		return Constants.LAUNCH_PAD_TYPE_ID;
 	}
+
+	override public void recalculateStats () {
+
+	}
+
+	override public int getRobotsNeeded () {
+		const int baseRobots = 1;
+		return baseRobots;
+	}
+
+	override public int getPowerNeeded () {
+		const int powerConsumption = 9;
+		return powerConsumption;
+	}
+
+	override public int getAreaNeeded () {
+		const int spaceUsed = 10;
+		//TODO Check level
+		return spaceUsed;
+
+	}
+
+	override public int getMaterialNeeded () {
+		const int baseCost = 45;
+		return baseCost;
+	}
+
 }
