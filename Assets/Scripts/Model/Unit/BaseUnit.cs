@@ -13,16 +13,6 @@ public abstract class BaseUnit : MonoBehaviour, ICost, ICapacity {
 
 	public float powerConsumption = 10;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	public virtual int GetCostType() {
 		return -1;
 	}

@@ -23,4 +23,35 @@ public class Drill : BaseBuilding {
 	override public int getUnitTypeId() {
 		return Constants.DRILL_TYPE_ID;
 	}
+
+	//Building Name: Robots / Power / Space / Unique Units / Silicaceous Ore
+	//Drill: 1 / 15 / 5 / 1 / 25
+	// public const int DRILL_MORE_ORE_UPGRADE_ID = 6;
+	// public const int DRILL_LESS_SPACE_UPGRADE_ID = 7;
+
+	override public void recalculateStats () {
+
+	}
+
+	override public int getRobotsNeeded () {
+		const int baseRobots = 1;
+		return baseRobots;
+	}
+
+	override public int getPowerNeeded () {
+		const int powerConsumption = 15;
+		return powerConsumption;
+	}
+
+	override public int getAreaNeeded () {
+		const int spaceUsed = 5;
+		//TODO Check level
+		return spaceUsed;
+
+	}
+
+	override public int getMaterialNeeded () {
+		const int baseCost = 25;
+		return baseCost;
+	}
 }

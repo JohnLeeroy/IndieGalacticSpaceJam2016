@@ -16,10 +16,8 @@ public abstract class Constants {
 	public const int DRILL_MORE_ORE_UPGRADE_ID = 6;
 	public const int DRILL_LESS_SPACE_UPGRADE_ID = 7;
 
-
 	public const int SILO_MORE_CAPACITY_UPGRADE_ID = 8;
 	public const int SILO_LESS_SPACE_UPGRADE_ID = 9;
-
 
 	public const int LAUNCHPAD_LARGER_PAYLOAD_CAPACITY_UPGRADE_ID = 10;
 	public const int LAUNCHPAD_LESS_SPACE_UPGRADE_ID = 11;
