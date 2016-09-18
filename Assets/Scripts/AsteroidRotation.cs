@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AsteroidTemp : MonoBehaviour {
+public class AsteroidRotation : MonoBehaviour {
 
 	public GameObject ship; 
 	private float y; 

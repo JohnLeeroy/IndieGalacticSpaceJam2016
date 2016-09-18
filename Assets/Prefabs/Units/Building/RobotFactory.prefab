@@ -107,3 +107,5 @@ MonoBehaviour:
   description: Builds robots
   size: 2
   powerConsumption: 10
+  asteroid: {fileID: 0}
+  robotCount: 1

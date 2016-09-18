@@ -3,6 +3,8 @@ using System.Collections;
 
 public class RobotFactory : BaseBuilding {
 
+	public int robotCount;
+
 	// Use this for initialization
 	void Start () {
 		

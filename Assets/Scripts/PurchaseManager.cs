@@ -19,15 +19,29 @@ public class PurchaseManager : MonoBehaviour {
 	public void Purchase(int unitTypeId) {
 		StoreEntry storeEntry = store.getStoreEntry(unitTypeId);
 		Asteroid asteroid = store.asteroid;
-
+		int unitType = storeEntry.unit.getUnitTypeId ();
 		bool hasSpace = asteroid.hasCapacity (storeEntry.unit.GetSize ());
 		if (!hasSpace) {
 			print ("Not enough space on the asteroid to build " + storeEntry.unit.unitName);
 			return;
 		}
+
+		bool hasEnergy = asteroid.hasPower (storeEntry.unit.powerConsumption);
+		if (unitType != Constants.SOLAR_COLLECTOR_TYPE_ID && !hasEnergy) {
+			print ("Not enough energy on the asteroid to build " + storeEntry.unit.unitName);
+			return;
+		}
+
+		bool hasRobot = asteroid.hasRobots (1);
+		print("Type : " + unitType + "  |  " + Constants.ROBOT_FACTORY_TYPE_ID);
+		if (unitType != Constants.ROBOT_FACTORY_TYPE_ID && !hasRobot) {
+			print ("Not enough robots on the asteroid to build " + storeEntry.unit.unitName);
+			return;
+		}
+
 		bool hasEnoughResource = false;
 		float cost = storeEntry.unit.GetCost ();
-		switch (storeEntry.unit.GetCostType()) {
+		switch (unitType) {
 		case Constants.COST_TYPE_FUEL: 
 			if (asteroid.fuel > cost) {
 				asteroid.fuel -= cost;
