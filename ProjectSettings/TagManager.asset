@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - earth
+  - Earth Clouds
+  - politicalteam
+  - streetteam
+  - collegeteam
   layers:
   - Default
   - TransparentFX
