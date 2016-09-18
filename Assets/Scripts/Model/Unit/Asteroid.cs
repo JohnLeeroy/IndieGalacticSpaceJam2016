@@ -22,13 +22,50 @@ public class Asteroid : MonoBehaviour {
 
 	public float materialCapacity;
 
+	//When sellable material is at 500 check to see if you have enough fuel which should be above 500. Then remove 500 sellable material and 500 fuel from the astroid.
+	//When freighter hits earth, earth gains $500x100
+
+
 	//Resources
 	public float materials = 1000;	// silicaceous
 	public float fuel = 1000;		// carbonaceous
 	public float sellableMaterial = 1000;		// Metallic
 
+	/*
+		Concept
+		The first rocket from Earth to an asteroid was funded by VC.  We have no money at this point and need a “starter kit” to get us going.  This kit will contain 4 of our 5 buildings.
+		Components
+		1 Solar Farm, 1 Drill, 1 Storage, & 1 Robotics Facility
+		Characteristics
+		This will provide immediate income
+		This will provide 2 extra robots for our next 2 buildings
+		This will provide 17 extra units of power for our next building(s)
+	*/
 	void Start() {
+		
 		recalculateStats ();
+	}
+
+	void Update () {
+		if(sellableMaterial >= 500.0){
+			if(fuel >= 500.0){
+				
+				sellableMaterial -= 500;
+				fuel -= 500;
+				//Spawn the freighter
+				GameObject freighter = (GameObject)Instantiate (Resources.Load("FreighterPrefab"), transform.position, Quaternion.identity);
+
+
+				//Give the freighter Currency, Right now it's just 1:1, modification to come.
+				freighter.GetComponent<FreighterController>().UpdateCurrency(500);
+
+				//Give the spawned ship the Vector2 location of the Astrod it's traveling to. 
+				freighter.GetComponent<FreighterController>().moveToLocation = new Vector2(0,0); 
+
+			}	
+		}
+
+
 	}
 
 	public bool hasCapacity(int targetBuildingSize) {

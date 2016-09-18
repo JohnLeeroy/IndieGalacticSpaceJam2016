@@ -5,7 +5,7 @@ public class Player : MonoBehaviour {
 
 	public float cashMoney;
 	public float rate = 1;
-	private float multiplier;
+	private float multiplier = 1;
 
 	protected int streetTeam;
 	protected int collegeTeam;
@@ -76,6 +76,10 @@ public class Player : MonoBehaviour {
 		multiplier = multiplier + (polictalTeam * 50);
 
 		return multiplier;
+	}
+
+	public void AddToCashMoney(float currencyToAdd){
+		cashMoney = cashMoney + currencyToAdd;
 	}
 
 }

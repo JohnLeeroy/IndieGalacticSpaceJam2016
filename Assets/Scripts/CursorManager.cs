@@ -19,8 +19,10 @@ public class CursorManager : MonoBehaviour {
 		if(Input.GetMouseButtonUp(0))
 		{
 			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
 			if (Physics.Raycast(ray, out hit, 500))
 			{
+				Debug.Log (hit.transform.tag);
 				switch(hit.transform.tag) {
 					case "asteroid":
 						selectedAsteroid = hit.transform.GetComponent<Asteroid> ();
