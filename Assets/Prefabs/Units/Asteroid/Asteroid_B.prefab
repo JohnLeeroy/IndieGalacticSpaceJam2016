@@ -24,7 +24,7 @@ GameObject:
   - 23: {fileID: 23000012222845212}
   - 33: {fileID: 33000010423290444}
   m_Layer: 0
-  m_Name: Asteroid_A 1
+  m_Name: Asteroid_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2ab70d44e5d7dd44290aeaf27fe1d7f5, type: 2}
+  - {fileID: 2100000, guid: 78fa8c6cf8494a8458e481f9665233b4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -78,7 +78,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011752551702}
-  m_Mesh: {fileID: 4300000, guid: 38c445290885e384197c7c05e3d49f5f, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 38c445290885e384197c7c05e3d49f5f, type: 3}
 --- !u!114 &114000010786548036
 MonoBehaviour:
   m_ObjectHideFlags: 1
