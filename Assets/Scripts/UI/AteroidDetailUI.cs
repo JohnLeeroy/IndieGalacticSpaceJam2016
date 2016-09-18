@@ -23,9 +23,9 @@ public class AteroidDetailUI : MonoBehaviour {
 	void SelectedAsteroid() {
 		Asteroid asteroid = cursorManager.selectedAsteroid;
 		nameLabel.text = asteroid.asteroidName;
-		robotLabel.text = string.Format ("Robot: {0} / {0}", asteroid.robotUsed, asteroid.robotCount);   
-		powerLabel.text = string.Format ("Power: {0} / {0}", asteroid.totalPowerConsumption, asteroid.totalPowerCapacity); 
-		areaLabel.text = string.Format ("Area:   {0} / {0}", asteroid.buildingCapacityUsed, asteroid.buildingCapacity); 
+		robotLabel.text = string.Format ("Robot: " + asteroid.robotUsed + " / " + asteroid.robotCount);   
+		powerLabel.text = string.Format ("Power: " +  asteroid.totalPowerConsumption + " / " + asteroid.totalPowerCapacity); 
+		areaLabel.text = string.Format ("Area:   " + asteroid.buildingCapacityUsed + " / " +  asteroid.buildingCapacity); 
 
 		fuelLabel.text = string.Format ("Ore C : {0} / {0}", ShortenStr(asteroid.fuel), ShortenStr(asteroid.materialCapacity)); 
 		materialLabel.text = string.Format ("Ore S: {0} / {0}", ShortenStr(asteroid.materials), ShortenStr(asteroid.materialCapacity)); 
